@@ -1,5 +1,8 @@
 package net.rodsduarte.mythrilore;
 
+import net.rodsduarte.mythrilore.item.ModCreativeModeTabs;
+import net.rodsduarte.mythrilore.item.ModItems;
+
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,6 +27,7 @@ public class MythrilOreMod
 
         modEventBus.addListener(this::commonSetup);
 
+        ModItems.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -35,6 +39,15 @@ public class MythrilOreMod
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.MYTHRIL_RAW);
+            event.accept(ModItems.MYTHRIL_INGOT);
+        }
+
+        if(event.getTab() == ModCreativeModeTabs.MYTHRIL_ORE_MOD_TAB) {
+            event.accept(ModItems.MYTHRIL_RAW);
+            event.accept(ModItems.MYTHRIL_INGOT);
+        }
     }
 
 
