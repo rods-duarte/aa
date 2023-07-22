@@ -50,10 +50,15 @@ public class MythrilOreMod
             event.accept(ModBlocks.MYTHRIL_BLOCK);
         }
 
+        if(event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.MYTHRIL_ORE);
+        }
+
         if(event.getTab() == ModCreativeModeTabs.MYTHRIL_ORE_MOD_TAB) {
             event.accept(ModItems.MYTHRIL_RAW);
             event.accept(ModItems.MYTHRIL_INGOT);
             event.accept(ModBlocks.MYTHRIL_BLOCK);
+            event.accept(ModBlocks.MYTHRIL_ORE);
         }
 
     }
