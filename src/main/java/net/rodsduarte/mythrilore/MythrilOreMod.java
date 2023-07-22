@@ -1,5 +1,6 @@
 package net.rodsduarte.mythrilore;
 
+import net.rodsduarte.mythrilore.block.ModBlocks;
 import net.rodsduarte.mythrilore.item.ModCreativeModeTabs;
 import net.rodsduarte.mythrilore.item.ModItems;
 
@@ -28,6 +29,7 @@ public class MythrilOreMod
         modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -44,10 +46,16 @@ public class MythrilOreMod
             event.accept(ModItems.MYTHRIL_INGOT);
         }
 
+        if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.MYTHRIL_BLOCK);
+        }
+
         if(event.getTab() == ModCreativeModeTabs.MYTHRIL_ORE_MOD_TAB) {
             event.accept(ModItems.MYTHRIL_RAW);
             event.accept(ModItems.MYTHRIL_INGOT);
+            event.accept(ModBlocks.MYTHRIL_BLOCK);
         }
+
     }
 
 
