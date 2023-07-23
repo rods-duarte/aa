@@ -1,0 +1,8 @@
+{
+    "replace": false,
+    "values": [
+        "mythrilore:mythril_ore",
+        "mythrilore:deepslate_mythril_ore",
+        "mythrilore:mythril_block"
+    ]
+}
