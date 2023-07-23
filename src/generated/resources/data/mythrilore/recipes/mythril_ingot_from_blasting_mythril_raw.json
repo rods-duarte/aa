@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 120,
+  "experience": 1.5,
+  "group": "mythril_ingot",
+  "ingredient": {
+    "item": "mythrilore:mythril_raw"
+  },
+  "result": "mythrilore:mythril_ingot"
+}

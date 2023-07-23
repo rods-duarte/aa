@@ -23,5 +23,3 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
-
-/src/main/java/net/rodsduarte/mythrilore/datagen
