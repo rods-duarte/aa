@@ -20,6 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.MYTHRIL_RAW);
         simpleItem(ModItems.MYTHRIL_INGOT);
+        handheldItem(ModItems.MYTHRIL_SWORD);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

@@ -55,12 +55,17 @@ public class MythrilOreMod
             event.accept(ModBlocks.DEEPSLATE_MYTHRIL_ORE);
         }
 
+        if(event.getTab() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.MYTHRIL_SWORD);
+        }
+
         if(event.getTab() == ModCreativeModeTabs.MYTHRIL_ORE_MOD_TAB) {
             event.accept(ModItems.MYTHRIL_RAW);
             event.accept(ModItems.MYTHRIL_INGOT);
             event.accept(ModBlocks.MYTHRIL_BLOCK);
             event.accept(ModBlocks.MYTHRIL_ORE);
             event.accept(ModBlocks.DEEPSLATE_MYTHRIL_ORE);
+            event.accept(ModItems.MYTHRIL_SWORD);
         }
 
     }
