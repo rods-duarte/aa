@@ -1,7 +1,7 @@
 package net.rodsduarte.mythrilore.item;
 
 import net.rodsduarte.mythrilore.MythrilOreMod;
-
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.SwordItem;
@@ -20,6 +20,8 @@ public class ModItems {
     public static final RegistryObject<Item> MYTHRIL_SWORD = ITEMS.register("mythril_sword", () -> new SwordItem(ModTiers.MYTHRIL, 6, -2.4F, new Item.Properties()));
 
     public static final RegistryObject<Item> MYTHRIL_PICKAXE = ITEMS.register("mythril_pickaxe", () -> new PickaxeItem(ModTiers.MYTHRIL, 1, -2.8F, new Item.Properties()));
+
+    public static final RegistryObject<Item> MYTHRIL_AXE = ITEMS.register("mythril_axe", () -> new AxeItem(ModTiers.MYTHRIL, 8F, -3.0F, new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
