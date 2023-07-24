@@ -47,6 +47,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.MYTHRIL_INGOT.get(), RecipeCategory.MISC, ModBlocks.MYTHRIL_BLOCK.get());
 
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MYTHRIL_SWORD.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern(" M ").pattern(" M ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_PICKAXE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MMM").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> consumer, List<ItemLike> itemList, RecipeCategory recipeCategory, ItemLike item, float xpValue, int timeToCook, String groupName) {
