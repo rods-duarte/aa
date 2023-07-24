@@ -2,5 +2,9 @@
     "item.mythrilore.mythril_raw": "Raw Mythril",
     "item.mythrilore.mythril_ingot": "Mythril Ingot",
 
+    "block.mythrilore.mythril_block": "Mythril Block",
+    "block.mythrilore.mythril_ore": "Mythril Ore",
+    "block.mythrilore.deepslate_mythril_ore": "Deepslate Mythril Ore",
+
     "creativemodetab.mythril_ore_mod_tab": "Mythril Ore Mod"
 }
