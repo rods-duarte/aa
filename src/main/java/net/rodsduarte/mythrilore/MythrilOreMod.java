@@ -3,7 +3,7 @@ package net.rodsduarte.mythrilore;
 import net.rodsduarte.mythrilore.block.ModBlocks;
 import net.rodsduarte.mythrilore.item.ModCreativeModeTabs;
 import net.rodsduarte.mythrilore.item.ModItems;
-
+import software.bernie.geckolib.GeckoLib;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +31,9 @@ public class MythrilOreMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        GeckoLib.initialize();
+
+        modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
@@ -57,6 +60,10 @@ public class MythrilOreMod
 
         if(event.getTab() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.MYTHRIL_SWORD);
+            event.accept(ModItems.MYTHRIL_HELMET);
+            event.accept(ModItems.MYTHRIL_CHESTPLATE);
+            event.accept(ModItems.MYTHRIL_LEGGINGS);
+            event.accept(ModItems.MYTHRIL_BOOTS);
         }
 
         if(event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
@@ -77,6 +84,11 @@ public class MythrilOreMod
             event.accept(ModItems.MYTHRIL_AXE);
             event.accept(ModItems.MYTHRIL_SHOVEL);
             event.accept(ModItems.MYTHRIL_HOE);
+            event.accept(ModItems.MYTHRIL_HELMET);
+            event.accept(ModItems.MYTHRIL_CHESTPLATE);
+            event.accept(ModItems.MYTHRIL_LEGGINGS);
+            event.accept(ModItems.MYTHRIL_BOOTS);
+
         }
 
     }
