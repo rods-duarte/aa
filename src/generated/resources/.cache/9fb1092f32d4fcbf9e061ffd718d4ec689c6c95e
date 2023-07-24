@@ -1,4 +1,4 @@
-// 1.19.4	2023-07-24T01:25:36.42365062	Recipes
+// 1.19.4	2023-07-24T03:13:28.604011	Recipes
 fdfe1c03609e785511c68bfc9124ef0e2b1d1c78 data/mythrilore/advancements/recipes/building_blocks/mythril_ingot.json
 14aa41fdf75ac100d9e73037a6ac5f4eb07b8047 data/mythrilore/advancements/recipes/combat/mythril_sword.json
 eccaf1b4d9e77674b822cd7ff02d52d966fcce63 data/mythrilore/advancements/recipes/misc/mythril_block.json
@@ -10,6 +10,7 @@ e5a212c6e0d64db62575155635865ca534fa3799 data/mythrilore/advancements/recipes/mi
 cab7a8e0433156ae710b653e0e1a642a283d3017 data/mythrilore/advancements/recipes/misc/mythril_ingot_from_smelting_mythril_raw.json
 67dad3928c8f6f652a848962398de297b5ab8737 data/mythrilore/advancements/recipes/tools/mythril_axe.json
 d7437bc842a97e37bd628d3aebc21e5c454e3ae9 data/mythrilore/advancements/recipes/tools/mythril_pickaxe.json
+cd154090c6d21089b50804f43ac1c93298147c4f data/mythrilore/advancements/recipes/tools/mythril_shovel.json
 26aa70dc1cb4e55a1eadb9ffbaec59735a2e171a data/mythrilore/recipes/mythril_axe.json
 d4214e4544b88a786905a93dc48b06701214c0de data/mythrilore/recipes/mythril_block.json
 c81a4f40d6c7e86b01d54a301711adfcd897fc9b data/mythrilore/recipes/mythril_ingot.json
@@ -20,4 +21,5 @@ a179ff2a2d0fe28f6c453e76d486d571e5533ec3 data/mythrilore/recipes/mythril_ingot_f
 78a9cb3de31929afde7bf9aa89b5a1cec7bd8eab data/mythrilore/recipes/mythril_ingot_from_smelting_mythril_ore.json
 4dcad2d7e214935a27841ef99a0da969d3f6e7ef data/mythrilore/recipes/mythril_ingot_from_smelting_mythril_raw.json
 8a1efbaa93dc1f8c3b8c19b863716fb4cd1167b4 data/mythrilore/recipes/mythril_pickaxe.json
+c670b94b8082a4b4bd2785e9fe0cceadbcbe8571 data/mythrilore/recipes/mythril_shovel.json
 e0ec75ba64ba7b34651f1a1a48a6363960b5f68b data/mythrilore/recipes/mythril_sword.json

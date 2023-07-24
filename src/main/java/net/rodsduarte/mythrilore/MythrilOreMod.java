@@ -62,6 +62,7 @@ public class MythrilOreMod
         if(event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.MYTHRIL_PICKAXE);
             event.accept(ModItems.MYTHRIL_AXE);
+            event.accept(ModItems.MYTHRIL_SHOVEL);
         }
 
         if(event.getTab() == ModCreativeModeTabs.MYTHRIL_ORE_MOD_TAB) {
@@ -73,7 +74,7 @@ public class MythrilOreMod
             event.accept(ModItems.MYTHRIL_SWORD);
             event.accept(ModItems.MYTHRIL_PICKAXE);
             event.accept(ModItems.MYTHRIL_AXE);
-
+            event.accept(ModItems.MYTHRIL_SHOVEL);
         }
 
     }

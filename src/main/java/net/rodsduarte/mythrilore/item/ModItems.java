@@ -4,6 +4,7 @@ import net.rodsduarte.mythrilore.MythrilOreMod;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,8 +22,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> MYTHRIL_PICKAXE = ITEMS.register("mythril_pickaxe", () -> new PickaxeItem(ModTiers.MYTHRIL, 1, -2.8F, new Item.Properties()));
 
-    public static final RegistryObject<Item> MYTHRIL_AXE = ITEMS.register("mythril_axe", () -> new AxeItem(ModTiers.MYTHRIL, 8F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> MYTHRIL_AXE = ITEMS.register("mythril_axe", () -> new AxeItem(ModTiers.MYTHRIL, 8, -3.0F, new Item.Properties()));
 
+    public static final RegistryObject<Item> MYTHRIL_SHOVEL = ITEMS.register("mythril_shovel", () -> new ShovelItem(ModTiers.MYTHRIL, 1.5F, -3F, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

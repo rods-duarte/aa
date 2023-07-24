@@ -52,6 +52,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_PICKAXE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MMM").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
         
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_AXE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MM ").pattern("MS ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_SHOVEL.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern(" M ").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
         
     }
 
