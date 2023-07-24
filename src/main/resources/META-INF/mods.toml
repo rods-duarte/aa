@@ -57,6 +57,13 @@ This mod adds Mythril ore.
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
+[[dependencies.mythrilore]] #optional
+    modId="geckolib" #mandatory
+    mandatory=true #mandatory
+    versionRange="[4.1.2,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+# Here's another dependency
 [[dependencies.mythrilore]]
     modId="minecraft"
     mandatory=true
