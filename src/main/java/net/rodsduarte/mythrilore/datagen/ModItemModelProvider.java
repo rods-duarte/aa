@@ -24,6 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.MYTHRIL_PICKAXE);
         handheldItem(ModItems.MYTHRIL_AXE);
         handheldItem(ModItems.MYTHRIL_SHOVEL);
+        handheldItem(ModItems.MYTHRIL_HOE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

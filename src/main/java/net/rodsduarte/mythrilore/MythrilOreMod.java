@@ -63,6 +63,7 @@ public class MythrilOreMod
             event.accept(ModItems.MYTHRIL_PICKAXE);
             event.accept(ModItems.MYTHRIL_AXE);
             event.accept(ModItems.MYTHRIL_SHOVEL);
+            event.accept(ModItems.MYTHRIL_HOE);
         }
 
         if(event.getTab() == ModCreativeModeTabs.MYTHRIL_ORE_MOD_TAB) {
@@ -75,6 +76,7 @@ public class MythrilOreMod
             event.accept(ModItems.MYTHRIL_PICKAXE);
             event.accept(ModItems.MYTHRIL_AXE);
             event.accept(ModItems.MYTHRIL_SHOVEL);
+            event.accept(ModItems.MYTHRIL_HOE);
         }
 
     }

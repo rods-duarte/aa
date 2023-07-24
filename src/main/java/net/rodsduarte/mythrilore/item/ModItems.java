@@ -2,6 +2,7 @@ package net.rodsduarte.mythrilore.item;
 
 import net.rodsduarte.mythrilore.MythrilOreMod;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
@@ -25,6 +26,8 @@ public class ModItems {
     public static final RegistryObject<Item> MYTHRIL_AXE = ITEMS.register("mythril_axe", () -> new AxeItem(ModTiers.MYTHRIL, 8, -3.0F, new Item.Properties()));
 
     public static final RegistryObject<Item> MYTHRIL_SHOVEL = ITEMS.register("mythril_shovel", () -> new ShovelItem(ModTiers.MYTHRIL, 1.5F, -3F, new Item.Properties()));
+
+    public static final RegistryObject<Item> MYTHRIL_HOE = ITEMS.register("mythril_hoe", () -> new HoeItem(ModTiers.MYTHRIL, -3, 0.0F, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
