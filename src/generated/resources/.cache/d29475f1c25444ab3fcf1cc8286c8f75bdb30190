@@ -1,0 +1,10 @@
+// 1.19.4	2023-07-23T09:28:51.40076934	Block States: mythrilore
+91dcd3eeee36cd451d97f4299fdf0b28809d27ff assets/mythrilore/blockstates/deepslate_mythril_ore.json
+f6e57bae613808318aa7f3f71f603f8affd8adde assets/mythrilore/blockstates/mythril_block.json
+920f7aad26714b77c49d4431a64248e939c7a07c assets/mythrilore/blockstates/mythril_ore.json
+c99ad915c409498932ac82933a4a002681e7fe4c assets/mythrilore/models/block/deepslate_mythril_ore.json
+18749494d9bfe2c43879df38f25cb4f743fb582d assets/mythrilore/models/block/mythril_block.json
+084f00d18de102d067b297b42deaf2581be69026 assets/mythrilore/models/block/mythril_ore.json
+0896b3bb3bca644d73171b731ab70f1b92fab27e assets/mythrilore/models/item/deepslate_mythril_ore.json
+f6462ee16d175b6935335f371dc8f2ee0cdfed1e assets/mythrilore/models/item/mythril_block.json
+61eb57cfced31477d228ed9953b6bf8c9bc3cd1d assets/mythrilore/models/item/mythril_ore.json
