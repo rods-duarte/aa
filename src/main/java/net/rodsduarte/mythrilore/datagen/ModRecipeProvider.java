@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import net.rodsduarte.mythrilore.MythrilOreMod;
 import net.rodsduarte.mythrilore.block.ModBlocks;
 import net.rodsduarte.mythrilore.item.ModItems;
-
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -17,6 +17,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -44,6 +45,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreBlasting(consumer, List.of(ModBlocks.MYTHRIL_ORE.get()), RecipeCategory.MISC, ModItems.MYTHRIL_INGOT.get(), 1.5f, 120, "mythril_ingot");
 
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.MYTHRIL_INGOT.get(), RecipeCategory.MISC, ModBlocks.MYTHRIL_BLOCK.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MYTHRIL_SWORD.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern(" M ").pattern(" M ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_PICKAXE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MMM").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_AXE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MM ").pattern("MS ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_SHOVEL.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern(" M ").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_HOE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MM ").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> consumer, List<ItemLike> itemList, RecipeCategory recipeCategory, ItemLike item, float xpValue, int timeToCook, String groupName) {
@@ -68,7 +80,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     nineBlockStorageRecipes(consumer, firstRecipeCategory, firstItem, secondRecipeCategory, secondItem, getSimpleRecipeName(secondItem), (String)null, getSimpleRecipeName(firstItem), (String)null);
  }
 
- protected static void nineBlockStorageRecipes(Consumer<FinishedRecipe> consumer, RecipeCategory firstRecipeCategory, ItemLike firstItem, RecipeCategory secondRecipeCategory, ItemLike secondItem, String firstRecipeName, @javax.annotation.Nullable String fisrtGroupName, String secondRecipeName, @javax.annotation.Nullable String secondGroupName) {
+   protected static void nineBlockStorageRecipes(Consumer<FinishedRecipe> consumer, RecipeCategory firstRecipeCategory, ItemLike firstItem, RecipeCategory secondRecipeCategory, ItemLike secondItem, String firstRecipeName, @javax.annotation.Nullable String fisrtGroupName, String secondRecipeName, @javax.annotation.Nullable String secondGroupName) {
       ShapelessRecipeBuilder.shapeless(firstRecipeCategory, firstItem, 9).requires(secondItem).group(secondGroupName).unlockedBy(getHasName(secondItem), has(secondItem)).save(consumer, new ResourceLocation(MythrilOreMod.MOD_ID, secondRecipeName));
       ShapedRecipeBuilder.shaped(secondRecipeCategory, secondItem).define('#', firstItem).pattern("###").pattern("###").pattern("###").group(fisrtGroupName).unlockedBy(getHasName(firstItem), has(firstItem)).save(consumer, new ResourceLocation(MythrilOreMod.MOD_ID, firstRecipeName));
    }
