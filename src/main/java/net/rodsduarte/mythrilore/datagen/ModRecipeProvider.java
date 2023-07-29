@@ -46,9 +46,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         nineBlockStorageRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.MYTHRIL_INGOT.get(), RecipeCategory.MISC, ModBlocks.MYTHRIL_BLOCK.get());
 
+        // TOOLS
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MYTHRIL_SWORD.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern(" M ").pattern(" M ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
 
-        
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_PICKAXE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MMM").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
         
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_AXE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MM ").pattern("MS ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
@@ -56,6 +56,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_SHOVEL.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern(" M ").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.MYTHRIL_HOE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).define('S', Items.STICK).pattern("MM ").pattern(" S ").pattern(" S ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+        // ARMOR
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MYTHRIL_HELMET.get()).define('M', ModItems.MYTHRIL_INGOT.get()).pattern("MMM").pattern("M M").pattern("   ").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MYTHRIL_CHESTPLATE.get()).define('M', ModItems.MYTHRIL_INGOT.get()).pattern("M M").pattern("MMM").pattern("MMM").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MYTHRIL_LEGGINGS.get()).define('M', ModItems.MYTHRIL_INGOT.get()).pattern("MMM").pattern("M M").pattern("M M").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MYTHRIL_BOOTS.get()).define('M', ModItems.MYTHRIL_INGOT.get()).pattern("   ").pattern("M M").pattern("M M").unlockedBy("has_mythril_ingot", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.MYTHRIL_INGOT.get()).build())).save(consumer);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> consumer, List<ItemLike> itemList, RecipeCategory recipeCategory, ItemLike item, float xpValue, int timeToCook, String groupName) {
